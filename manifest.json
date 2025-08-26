@@ -1,5 +1,5 @@
 {
-  "name": "CR Gendarmerie - Moyens",
+  "name": "CR Gendarmerie",
   "short_name": "CR Gend",
   "start_url": "./index.html",
   "display": "standalone",
@@ -19,3 +19,4 @@
     }
   ]
 }
+
