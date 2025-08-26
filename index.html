@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CR Gendarmerie - Moyens</title>
 
-<!-- Manifest PWA -->
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3498db">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -169,7 +168,6 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-// Gestion bouton "Ajouter à l'écran d'accueil" Android
 let deferredPrompt;
 const btnInstall = document.getElementById('btnInstall');
 
@@ -246,20 +244,16 @@ btnInstall.addEventListener('click', async () => {
   }
   updateUI();
 
-  // Événements boutons + / -
   document.querySelectorAll('button.plusminus').forEach(btn=>{
     btn.addEventListener('click',()=>changeCount(btn.dataset.type,btn.dataset.field,btn.dataset.action));
   });
 
-  // Ajouter CV manuellement
   ['train','bus','vl','pl'].forEach(type=>{
     document.getElementById(type+'CvAddManualBtn').addEventListener('click',()=>addManualCv(type));
   });
 
-  // Générer compte rendu
   document.getElementById('generateBtn').addEventListener('click',generateCR);
 
-  // Effacer les données sauvegardées
   document.getElementById('resetBtn').addEventListener('click',()=>{
     if(confirm('Voulez-vous vraiment effacer toutes les données sauvegardées ?')){
       localStorage.removeItem('moyensData');
@@ -275,3 +269,4 @@ btnInstall.addEventListener('click', async () => {
 </script>
 </body>
 </html>
+
