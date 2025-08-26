@@ -1,6 +1,6 @@
 {
   "name": "CR Gendarmerie",
-  "short_name": "CR compteur",
+  "short_name": "CR COUNT",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -19,5 +19,6 @@
     }
   ]
 }
+
 
 
