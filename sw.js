@@ -1,4 +1,4 @@
-const CACHE_NAME = "cr-gendarmerie-" + new Date().getTime();
+const CACHE_NAME = "cr-gendarmerie" + new Date().getTime();
 const URLS_TO_CACHE = [
   "./",
   "./index.html",
@@ -30,4 +30,5 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+
 
