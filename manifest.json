@@ -1,11 +1,10 @@
 {
-  "name": "CR Gendarmerie",
-  "short_name": "CR COUNT",
-  "start_url": "./index.html",
+  "name": "Cr Gendarmerie",
+  "short_name": "GEND count",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#3498db",
-  "orientation": "portrait",
+  "theme_color": "#2c3e50",
   "icons": [
     {
       "src": "icon-192.png",
@@ -19,6 +18,7 @@
     }
   ]
 }
+
 
 
 
