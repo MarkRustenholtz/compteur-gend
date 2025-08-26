@@ -1,4 +1,3 @@
-// Cache versionné automatiquement
 const CACHE_NAME = "cr-gendarmerie-" + new Date().getTime();
 const URLS_TO_CACHE = [
   "./",
@@ -8,7 +7,6 @@ const URLS_TO_CACHE = [
   "./icon-512.png"
 ];
 
-// Installation
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(URLS_TO_CACHE))
@@ -16,7 +14,6 @@ self.addEventListener("install", event => {
   self.skipWaiting();
 });
 
-// Activation : nettoyage anciens caches
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys =>
@@ -26,7 +23,6 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
-// Fetch
 self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request).then(response => {
@@ -34,3 +30,4 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+
