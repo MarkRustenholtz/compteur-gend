@@ -158,7 +158,6 @@
 </section>
 
 <script>
-// Enregistrement du service worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js").then(
@@ -234,7 +233,6 @@ btnInstall.addEventListener('click', async () => {
     document.getElementById('compteRendu').value = cr;
   }
 
-  // Charger les données sauvegardées si existantes
   const savedData = localStorage.getItem('moyensData');
   if(savedData){
     try{
@@ -269,4 +267,5 @@ btnInstall.addEventListener('click', async () => {
 </script>
 </body>
 </html>
+
 
